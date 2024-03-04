@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Center(
                             child: Text(
                           "Login",
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: 40),
                         ))),
                     const SizedBox(
                       height: 10,
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Center(
                           child: Text(
                             "Welcome Back",
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: 18),
                           ),
                         )),
                   ],
@@ -96,15 +96,16 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                       child: const TextField(
                                         decoration: InputDecoration(
-                                            hintText: "Email or Phone number",
-                                            hintStyle:
-                                                TextStyle(color: Colors.grey),
+                                            prefixIcon: Icon(Icons.person),
+                                            hintText: "Username",
+                                            hintStyle: TextStyle(
+                                                color: AppColors.TEXT_COLOR),
                                             border: InputBorder.none),
                                       )),
                                   Container(
                                     padding: const EdgeInsets.all(10),
                                     decoration: const BoxDecoration(
-                                      color: Colors.white,
+                                      color: AppColors.PRIMARY_TEXTE_COLOR,
                                       borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(30),
                                         topRight: Radius.circular(30),
@@ -113,9 +114,10 @@ class _HomePageState extends State<HomePage> {
                                     child: const TextField(
                                       obscureText: true,
                                       decoration: InputDecoration(
+                                          prefixIcon: Icon(Icons.key),
                                           hintText: "Password",
-                                          hintStyle:
-                                              TextStyle(color: Colors.grey),
+                                          hintStyle: TextStyle(
+                                              color: AppColors.TEXT_COLOR),
                                           border: InputBorder.none),
                                     ),
                                   ),
@@ -139,18 +141,15 @@ class _HomePageState extends State<HomePage> {
                             child: MaterialButton(
                               onPressed: () {},
                               height: 50,
-                              // margin: EdgeInsets.symmetric(horizontal: 50),
                               color: AppColors.BUTTON_COLOR,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
-                             
-                              
                               child: const Center(
                                 child: Text(
                                   "Login",
                                   style: TextStyle(
-                                      color: AppColors.PRIMARY_TEXTE_COLOR,
+                                      color: AppColors.PRIMARY_COLOR,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
