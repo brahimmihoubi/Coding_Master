@@ -1,5 +1,5 @@
 import 'package:aghwat/constants.dart/color.dart';
-import 'package:aghwat/pages/studentsinformations.dart';
+import 'package:aghwat/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:aghwat/pages/forgottenpassword.dart';
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const StudentsInformations()),
+                                          const DashBoard()),
                                 );
                               },
                               height: 50,
