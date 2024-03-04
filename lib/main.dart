@@ -1,6 +1,8 @@
 import 'package:aghwat/constants.dart/color.dart';
+import 'package:aghwat/pages/studentsinformations.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:aghwat/pages/forgottenpassword.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -38,7 +40,8 @@ class _HomePageState extends State<HomePage> {
                         child: const Center(
                             child: Text(
                           "Login",
-                          style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: 40),
+                          style: TextStyle(
+                              color: AppColors.PRIMARY_COLOR, fontSize: 40),
                         ))),
                     const SizedBox(
                       height: 10,
@@ -48,7 +51,8 @@ class _HomePageState extends State<HomePage> {
                         child: const Center(
                           child: Text(
                             "Welcome Back",
-                            style: TextStyle(color: AppColors.PRIMARY_COLOR, fontSize: 18),
+                            style: TextStyle(
+                                color: AppColors.PRIMARY_COLOR, fontSize: 18),
                           ),
                         )),
                   ],
@@ -128,35 +132,49 @@ class _HomePageState extends State<HomePage> {
                           height: 40,
                         ),
                         FadeInUp(
-                            duration: const Duration(milliseconds: 1500),
-                            child: const Text(
+                          duration: const Duration(milliseconds: 1500),
+                          child: ListTile(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ForgottenPassword()));
+                            },
+                            title: const Text(
                               "Forgot Password?",
                               style: TextStyle(color: AppColors.TEXT_COLOR),
-                            )),
+                            ),
+                          ),
+                        ),
                         const SizedBox(
                           height: 40,
                         ),
                         FadeInUp(
-                            duration: const Duration(milliseconds: 1600),
-                            child: MaterialButton(
-                              onPressed: () {},
+                          duration: const Duration(milliseconds: 1600),
+                          child: MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const StudentsInformations()),
+                                );
+                              },
                               height: 50,
                               color: AppColors.BUTTON_COLOR,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
                               child: const Center(
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                      color: AppColors.PRIMARY_COLOR,
-                                      fontWeight: FontWeight.bold),
+                                child: ListTile(
+                                  title: Text(
+                                    "                  "
+                                    "Login",
+                                    style: TextStyle(
+                                        color: AppColors.PRIMARY_COLOR,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
-                              ),
-                            )),
-                        const SizedBox(
-                          height: 50,
-                        ),
+                              )),
+                        )
                       ],
                     ),
                   ),
