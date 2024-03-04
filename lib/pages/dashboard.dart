@@ -1,40 +1,146 @@
 import 'package:aghwat/constants.dart/color.dart';
-import 'package:aghwat/constants.dart/table.dart';
 import 'package:flutter/material.dart';
-// import 'package:aghwat/constants.dart/color.dart';
+import 'package:flutter/widgets.dart';
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+class MyDashboard extends StatelessWidget {
+  const MyDashboard({super.key});
 
-  @override
-  State<DashBoard> createState() => _DashBoard();
-}
-
-class _DashBoard extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.APP_BAR_COLOR,
-          centerTitle: false,
-          title: Text(
-            'Here all informations',
-            style: TextStyle(
-                fontSize: 18,
-                // fontWeight: FontWeight.bold,
-                color: AppColors.PRIMARY_TEXTE_COLOR,
-                backgroundColor: AppColors.APP_BAR_COLOR),
+          title: const Text(
+            'Dashboard',
+            style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
           ),
         ),
-        backgroundColor: AppColors.PRIMARY_TEXTE_COLOR,
-        body: const Card(
-          child: SingleChildScrollView(
-            child: DataList(),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Card(margin: const EdgeInsets.all(8.0),
+            
+              color: AppColors.APP_BAR_COLOR,
+              child: const Padding(
+                padding: EdgeInsets.all(1.0),
+                child: Row(
+                  children: [Center(
+                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "   Id    ",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "   Nin   ",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "Matricule",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "  nomAr  ",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          " prenomAr",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "  nomFr  ",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          " prenomAr",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "dateNissance",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "myenBac",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: AppColors.PRIMARY_TEXTE_COLOR),
+                        ),
+                      ],
+                    ),
+                  ),]
+                ),
+              ),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

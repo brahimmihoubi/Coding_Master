@@ -1,5 +1,6 @@
 import 'package:aghwat/constants.dart/color.dart';
 import 'package:aghwat/pages/dashboard.dart';
+import 'package:aghwat/pages/notedebac.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:aghwat/pages/forgottenpassword.dart';
@@ -155,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const DashBoard()),
+                                          const MyDashboard()),
                                 );
                               },
                               height: 50,
@@ -174,7 +175,36 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               )),
-                        )
+                        ),const SizedBox(
+                          height: 20,
+                        ),
+                        FadeInUp(
+                          duration: const Duration(milliseconds: 1600),
+                          child: MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const NoteDeBac()),
+                                );
+                              },
+                              height: 50,
+                              color: AppColors.BUTTON_COLOR,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: const Center(
+                                child: ListTile(
+                                  title: Text(
+                                    "         "
+                                    "Les notes de bac",
+                                    style: TextStyle(
+                                        color: AppColors.PRIMARY_COLOR,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )),
+                        ),
                       ],
                     ),
                   ),
